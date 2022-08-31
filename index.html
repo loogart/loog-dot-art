@@ -57,25 +57,37 @@
     <style>
         .img-hero {
             width: 100%;
-            height: 150px;
-            object-fit: cover;
+            height: 120px;
+            display: block;
+            background-image: url("img/loogart-montreal-mashup.png");
+            background-repeat: no-repeat;
+            background-size: 800px;
+            background-position: 5% 5%;
         }
 
         a.tile {
-            display: block;
+            display: flex;
             text-decoration: none;
             transition: all .15s ease-in-out;
+            align-items: center;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow:
+                0px 3.3px 5px rgba(0, 0, 0, 0.035),
+                0px 8px 40px rgba(0, 0, 0, 0.07);
+                margin-bottom: 12px;
         }
 
         a.tile:hover {
-            opacity: .9;
-            transform: translateY(-3px);
+            opacity: .96;
+            transform: scale(1.01);
         }
 
         .img-tile {
-            width: 120px;
+            width: 40%;
             height: 80px;
             object-fit: cover;
+            flex-grow: 0;
         }
 
         small {
@@ -83,9 +95,17 @@
         }
 
         @media(min-width:420px) {
+            .img-hero {
+                background-size: 105%;
+            }
+            a.tile {
+                flex-direction: column;
+                border-radius: 24px;
+            }
+               
             .img-tile {
                 width: 100%;
-                height: 100px;
+                height: 140px;
             }
         }
     </style>
@@ -100,123 +120,88 @@
     </script>
 </head>
 
-<body class="bg-black p-2">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-sm-11 col-md-10 col-lg-8 text-center p-0">
-                <div class="bg-white overflow-hidden" style="border-radius: 16px!important;">
-                    <img src="./img/loogart-montreal-mashup.png" class="img-hero" alt="">
-                    <div style="transform: translateY(-40px);">
-                        <img src="./img/chris avatar.jpg" alt=""
-                            class="rounded-circle border border-white border-3 w-100 shadow-lg" style="max-width:120px">
-                        <div class="p-3">
-                            <h1 class="fw-bold">Loogart<i class="fa-solid fa-badge-check fa-xs ms-2 text-info"></i></h1>
-                            <p>Artist. Minimal, bold and colorful.</p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <a href="https://www.instagram.com/loogart/" target="_blank">
-                                        <i aria-hidden="true" class="fa-brands fa-instagram fa-2x me-2 text-dark"
-                                            title="Instagram of Loogart"></i><span class="fa-sr-only">Instagram of
-                                            Loogart</span>
-                                    </a></li>
-                                <li class="list-inline-item">
-                                    <a href="https://www.facebook.com/Loogart/" target="_blank">
-                                        <i aria-hidden="true" class="fa-brands fa-facebook fa-2x me-2 text-dark"
-                                            title="Facebook page of Loogart"></i><span class="fa-sr-only">Facebook page
-                                            of Loogart</span>
-                                    </a></li>
+<body>
+    <div class="container-fluid text-center p-0">
+        <div class="bg-white overflow-hidden">
+
+            <div class="img-hero"></div>
+            
+            <div class="container" style="transform: translateY(-30px);">
+                <img src="./img/chris avatar.jpg" alt="Loogmoji avatar of artist Chris Soueidan a.k.a. Loogart" class="rounded-circle border border-white border-3 w-100 shadow" style="max-width:100px">
+                <div class="p-2">
+                    <h1 class="fw-bold">Loogart<i class="fa-solid fa-badge-check fa-xs ms-2 text-info"></i></h1>
+                    <p>Artist. Minimal, bold and colorful.</p>
+
+                    <!-- Social links-->
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/loogart/" target="_blank">
+                                <i aria-hidden="true" class="fa-brands fa-instagram fa-2x me-2 text-dark" title="Instagram of Loogart"></i><span class="fa-sr-only">Instagram of Loogart</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://vimeo.com/loogart" target="_blank">
+                                <i aria-hidden="true" class="fa-brands fa-vimeo fa-2x me-2 text-dark" title="Vimeo of Loogart"></i><span class="fa-sr-only">Motion graphics and animation projects</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/Loogart/" target="_blank">
+                                <i aria-hidden="true" class="fa-brands fa-facebook fa-2x me-2 text-dark" title="Facebook page of Loogart"></i><span class="fa-sr-only">Facebook page of Loogart</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/p/CV1cLsjpl37/" target="_blank">
+                                <img src="./img/logo-complex.png" alt="Loogart featured on Complex" width="32" height="32" class="mb-3 me-2 rounded">
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="mailto:chris@loogart.com" target="_blank">
+                                <i aria-hidden="true" class="fa-regular fa-envelope fa-2x me-2 text-dark"  title="Email me for design projects"></i><span class="fa-sr-only">Email me</span>
+                            </a>
+                        </li>
+                    </ul>
 
 
-
-                            </ul>
-
-                            <div class="row text-left">
-
-                                <div class="col-12 col-sm-6 col-md-4 mb-3">
-                                    <a href="https://shop.loogart.com" target="_blank" class="tile">
-                                        <div
-                                            class="d-flex rounded-3 border border-dark border-4 rounded-3 align-items-center flex-sm-column">
-                                            <img src="./img/custom-loogmoji.jpg" alt="" class="img-tile">
-                                            <div class="p-3 text-start d-flex justify-content-center w-100">
-                                                <h5 class="text-dark font-weight-bold mb-0 text-start text-sm-center">
-                                                    <small class="d-block">Your Custom</small>Loogmoji</h5>
-                                            </div>
-                                        </div>
-                                    </a>
+                    <!-- Links -->
+                    <div class="row text-left">                                 
+                        
+                        <!-- Shop YUL Love Me -->
+                        <div class="col-sm-6 col-md-4">
+                            <a href="https://brefmtl.com/collections/boutique/products/affiche-yul-love" target="_blank" class="tile border border-3">
+                                <img src="./img/yul-love-me.jpg" alt="" class="img-tile">
+                                <div class="p-2 flex-grow-1">
+                                    <h2 class="h6 text-dark fw-bold mt-2"><small class="d-block fw-normal mb-1">Buy Prints</small>YUL Love Me</h2>
                                 </div>
-                                <div class="col-12 col-sm-6 col-md-4  mb-3">
-                                    <a href="https://loogart.com" target="_blank" class="tile">
-                                        <div
-                                            class="d-flex rounded-3 border border-dark border-4 rounded-3 align-items-center flex-sm-column">
-                                            <img src="./img/portfolio.jpg" alt="" class="img-tile">
-                                            <div class="p-3 text-start d-flex justify-content-center w-100">
-                                                <h5 class="text-dark font-weight-bold mb-0 text-start text-sm-center">
-                                                    <small class="d-block">Art portfolio</small>Website</h5>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-4  mb-3">
-                                    <a href="https://www.instagram.com/p/CV1cLsjpl37/" target="_blank" class="tile">
-                                        <div
-                                            class="d-flex rounded-3 border border-dark border-4 rounded-3 align-items-center flex-sm-column">
-                                            <img src="./img/complex-banner.jpg" alt="" class="img-tile">
-                                            <div class="p-3 text-start d-flex justify-content-center w-100">
-                                                <h5 class="text-dark font-weight-bold mb-0 text-start text-sm-center">
-                                                    <small class="d-block">Featured on</small>Complex</h5>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-
-
-                                <div class="col-6 col-md-4  mb-3">
-                                    <a href="https://vimeo.com/loogart" target="_blank" class="tile">
-                                        <div
-                                            class="d-flex rounded-3 border border-dark border-4 rounded-3 align-items-center flex-sm-column">
-                                            <div class="p-3 justify-content-center w-100 text-start text-sm-center">
-                                                <span class="h1 d-block">👾</span>
-                                                <h5 class="text-dark font-weight-bold mb-0 text-start text-sm-center">
-                                                    <small class="d-block">Motion design</small>Animation</h5>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-4  mb-3">
-                                    <a href="#!" target="_blank" class="tile">
-                                        <div
-                                            class="d-flex rounded-3 border border-dark border-4 rounded-3 align-items-center flex-sm-column">
-                                            <div class="p-3 justify-content-center w-100 text-start text-sm-center">
-                                                <span class="h1 d-block">⏱</span>
-                                                <h5 class="text-dark font-weight-bold mb-0"><small
-                                                        class="d-block">Coming soon</small>NFT</h5>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-4  mb-3">
-                                    <a href="mailto:chris@loogart.com" target="_blank" class="tile">
-                                        <div
-                                            class="d-flex rounded-3 border border-dark border-4 rounded-3 align-items-center flex-sm-column">
-                                            <div class="p-3 justify-content-center w-100 text-start text-sm-center">
-                                                <span class="h1 d-block">💰</span>
-                                                <h5 class="text-dark font-weight-bold mb-0"><small
-                                                        class="d-block">Email me</small>
-                                                        Design projects</h5>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-
-
-                            </div>
+                            </a>
                         </div>
+
+                        <!-- Shop Loogmoji -->
+                        <div class="col-sm-6 col-md-4">
+                            <a href="https://shop.loogart.com" target="_blank" class="tile border border-3">
+                                <img src="./img/loogmoji.jpg" alt="" class="img-tile">
+                                <div class="p-2 flex-grow-1">
+                                    <h2 class="h6 text-dark fw-bold mt-2"><small class="d-block fw-normal mb-1">Shop Custom</small>Loogmoji</h2>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Portfolio -->
+                        <div class="col-sm-6 col-md-4">
+                            <a href="https://loogart.com" target="_blank" class="tile border border-3">
+                                <img src="./img/portfolio.jpg" alt="" class="img-tile">
+                                <div class="p-2 flex-grow-1">
+                                    <h2 class="h6 text-dark fw-bold mt-2"><small class="d-block fw-normal mb-1">Client work</small>Portfolio</h2>
+                                </div>
+                            </a>
+                        </div>                                
+
                     </div>
+
                 </div>
             </div>
+
         </div>
+
     </div>
 
 
